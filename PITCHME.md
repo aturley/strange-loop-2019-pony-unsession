@@ -36,7 +36,7 @@ There are three things you can do to an object with an alias:
 * write to it
 * send it a message (if it is an alias to an actor)
 
-[01]
+[code](https://playground.ponylang.io/?gist=310cb1f5df09cc732c98110696123c60)
 
 ---
 
@@ -48,7 +48,7 @@ Aliases are assigned values from:
 * new objects
 * exiting objects that have or had aliases
 
-[02]
+[code](https://playground.ponylang.io/?gist=d90f6d0cd1d813bdd90ac5d7ec2a447a)
 
 ---
 
@@ -90,7 +90,7 @@ All reference capabilities can be used to send a message to an actor
 
 A tag alias can be used to send messages to an actor.
 
-[tag]
+[code](https://playground.ponylang.io/?gist=d90f6d0cd1d813bdd90ac5d7ec2a447a)
 
 ---
 
@@ -102,7 +102,7 @@ It makes no guarantees about how many other readable or writable aliases exist.
 
 No other actor can have a read or write alias to the aliased object.
 
-[ref]
+[code](https://playground.ponylang.io/?gist=d90f6d0cd1d813bdd90ac5d7ec2a447a)
 
 ---
 
@@ -114,7 +114,7 @@ It guarantees that there are no writable aliases to this object.
 
 Multiple actors can have val aliases that point to the same object.
 
-[val]
+[code](https://playground.ponylang.io/?gist=d90f6d0cd1d813bdd90ac5d7ec2a447a)
 
 ---
 
@@ -126,6 +126,8 @@ It guaranteeds that there are no other readable or writeable aliases to the obje
 
 If you "give up" an iso alias then you know there are no readable or writeable aliases, so you could safely pass the object to another actor and it could create a readable alias.
 
+[code](https://playground.ponylang.io/?gist=d05b9dee59ee58eb37e62c3a0777f9e4)
+
 ---
 
 ## box
@@ -136,7 +138,7 @@ It makes no guarantees about how many other readable or writable aliases exist.
 
 This lets you write code that can handle either val aliases or ref aliases, as long as the code only reads the object.
 
-[box]
+[code](https://playground.ponylang.io/?gist=56ee95f5a1ef091f39aa3bc1ed6a57b5)
 
 ---
 
