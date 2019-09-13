@@ -6,6 +6,8 @@ twitter: @casio_juarez
 
 github: aturley
 
+---
+
 ## What is Pony
 
 Pony is
@@ -14,12 +16,16 @@ Pony is
 * compiled
 * statically typed
 
+---
+
 ## Why Pony
 
 * concurrency is built-in with actors
 * no data races
 
 [00]
+
+---
 
 ## Avoiding Data Races -- Aliases
 
@@ -34,6 +40,8 @@ There are three things you can do to an object with an alias:
 
 [01]
 
+---
+
 ## Avoiding Data Races -- Aliases
 
 Aliases must refer to some object (no null pointers)
@@ -44,6 +52,8 @@ Aliases are assigned values from:
 
 [02]
 
+---
+
 ## Avoiding Data Races -- Aliases
 
 Pony's "no data races" guarantee comes from controling how aliases are used to access objects from different actors
@@ -53,12 +63,16 @@ Aliases are controlled by reference capabilities
 REFERENCE CAPABILITIES
 REF CAPS
 
+---
+
 ## Avoiding Data Races -- Rules
 
 There are two rules:
 
 1. If there is a writable alias to an object then no other actor can have a readable or writable alias to that object
 2. If there are no writable aliases to an object then more than one actor can have a readable alias to that object
+
+---
 
 ## Reference Capabilities
 
@@ -71,11 +85,15 @@ trn ("transitional") -- read, write
 
 All reference capabilities can be used to send a message to an actor
 
+---
+
 ## tag
 
 A tag alias can be used to send messages to an actor.
 
 [tag]
+
+---
 
 ## ref
 
@@ -87,6 +105,8 @@ No other actor can have a read or write alias to the aliased object.
 
 [ref]
 
+---
+
 ## val
 
 A val alias can only be used read an object.
@@ -97,6 +117,8 @@ Multiple actors can have val aliases that point to the same object.
 
 [val]
 
+---
+
 ## iso
 
 An iso alias can be used to read or write an object.
@@ -104,6 +126,8 @@ An iso alias can be used to read or write an object.
 It guaranteeds that there are no other readable or writeable aliases to the object.
 
 If you "give up" an iso alias then you know there are no readable or writeable aliases, so you could safely pass the object to another actor and it could create a readable alias.
+
+---
 
 ## box
 
@@ -114,6 +138,8 @@ It makes no guarantees about how many other readable or writable aliases exist.
 This lets you write code that can handle either val aliases or ref aliases, as long as the code only reads the object.
 
 [box]
+
+---
 
 # trn
 
