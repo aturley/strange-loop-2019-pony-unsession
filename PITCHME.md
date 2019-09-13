@@ -1,10 +1,8 @@
-# Riding the Range with Pony
+*Getting in the Saddle with the Pony Programming Language*
 
 Andrew Turley
 
 twitter: @casio_juarez
-
-github: aturley
 
 ---
 
@@ -23,7 +21,7 @@ Pony is
 * concurrency is built-in with actors
 * no data races
 
-[00]
+[code](https://playground.ponylang.io/?gist=a0b96fe606b487861c7cdc7fd971495a)
 
 ---
 
@@ -61,6 +59,7 @@ Pony's "no data races" guarantee comes from controling how aliases are used to a
 Aliases are controlled by reference capabilities
 
 REFERENCE CAPABILITIES
+
 REF CAPS
 
 ---
@@ -76,12 +75,12 @@ There are two rules:
 
 ## Reference Capabilities
 
-tag -- no read, no write
-ref ("reference") -- read, write
-val ("value") -- read, no write
-iso ("isolated") -- read, write
-box -- read, no write
-trn ("transitional") -- read, write
+* tag -- no read, no write
+* ref ("reference") -- read, write
+* val ("value") -- read, no write
+* iso ("isolated") -- read, write
+* box -- read, no write
+* trn ("transitional") -- read, write
 
 All reference capabilities can be used to send a message to an actor
 
