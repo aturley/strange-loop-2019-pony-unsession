@@ -17,3 +17,4 @@ Here are some useful resources while you're learning Pony:
 * [Pony Playground](https://playground.ponylang.io) -- Play with Pony in the browswer!
 * [Pony Cheat Sheet](https://www.ponylang.io/media/cheatsheet/pony-cheat-sheet.pdf)
 * [Pony Considerations](https://gist.github.com/aturley/49b60c98306d90ffc2f981515827b005)
+* [Pony Workshop](https://github.com/aturley/pony-workshop)
